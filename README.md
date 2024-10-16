@@ -91,9 +91,9 @@ df.head()
 | 2023-10-18 | 2                               | 1                              | 3                             | 42   | Wednesday |
 | 2023-10-19 | 2                               | 0                              | 2                             | 42   | Thursday  |
 
-Now, we can calculate the mean number of lightning strikes for each weekday of the year. We will use the `groupby()` function to do this.
+Now, we can calculate the mean number of views for each weekday of the year. We will use the `groupby()` function to do this.
 ```r
-# Calculate the mean count of lightning strikes for each weekday.
+# Calculate the mean count of views for each weekday.
 df[['weekday','Total unique visitors (total)']].groupby(['weekday']).mean()
 ```
 | Weekday   | Total Unique Visitors (Average) |
@@ -115,20 +115,20 @@ weekday_order = ['Monday','Tuesday', 'Wednesday', 'Thursday','Friday','Saturday'
 ```
 Now, we will code the plot. Remember that `showfliers` is the parameter that controls whether or not outliers are displayed in the plot. If we input `True`, outliers are included; if we input `False`, outliers are left off of the box plot. Keep in mind, we aren’t deleting any outliers from the dataset when we create this chart—we are only excluding them from the visualization.
 ```r
-# Create boxplots of strike counts for each day of week.
+# Create boxplots of view counts for each day of week.
 g = sns.boxplot(data=df, 
             x='weekday',
-            y='number_of_strikes', 
+            y='Total unique visitors (total)', 
             order=weekday_order, 
             showfliers=False 
             );
-g.set_title('Lightning distribution per weekday (2018)');
+g.set_title('Views distribution per weekday (2023-2024)');
 ```
 *LINK* Boxplot_Views
 Notice that the median remains different on all of the days of the week. As for Saturday and Sunday, however, the distributions are both lower than they are during the rest of the week. We also know that the mean numbers of views that occurred on Saturday and Sunday were lower than on the other weekdays. Why might this be? Perhaps people prefers to spend more time with the family. In the U.S., Saturday and Sunday are days that many people don't work, so there may be fewer people  on their mobiles or computers. This is only speculation, but it's one possible path for further exploration.
 
 ## Monthly Views 2023–2024
-Finally, we will examine monthly lightning views data from 2023–2024. We will calculate the total views for each year that occurred in a given month. We will then plot this data on a bar graph.
+Finally, we will examine monthly visitor's views data from 2023–2024. We will calculate the total views for each year that occurred in a given month. We will then plot this data on a bar graph.
 
 To help us name the bars of the bar plot, we will create three new columns that isolate the year, month number, and month name.
 ```r
