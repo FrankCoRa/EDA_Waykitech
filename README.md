@@ -125,6 +125,7 @@ g = sns.boxplot(data=df,
 g.set_title('Views distribution per weekday (2023-2024)');
 ```
 ![Alt text](https://github.com/FrankCoRa/EDA_Waykitech/blob/main/Boxplot_Views.png)
+
 Notice that the median remains different on all of the days of the week. As for Saturday and Sunday, however, the distributions are both lower than they are during the rest of the week. We also know that the mean numbers of views that occurred on Saturday and Sunday were lower than on the other weekdays. Why might this be? Perhaps people prefers to spend more time with the family. In the U.S., Saturday and Sunday are days that many people don't work, so there may be fewer people  on their mobiles or computers. This is only speculation, but it's one possible path for further exploration.
 
 ## Monthly Views 2023–2024
