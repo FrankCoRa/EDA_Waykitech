@@ -74,6 +74,7 @@ First, we will create a column called `week` using `dt.isocalendar()` on the `Da
 | Year | Week | Day |
 |------|------|-----|
 | 1950 | 1    | 3   |
+
 Because we only want to extract the week number, we will add `.week` to the end.
 
 ```r
@@ -104,6 +105,7 @@ df[['weekday','Total unique visitors (total)']].groupby(['weekday']).mean()
 | Thursday  | 4.134615                       |
 | Tuesday   | 6.000000                       |
 | Wednesday | 5.442308                       |
+
 It seems that Saturday and Sunday have fewer views on average than the other five weekdays. We will plot the distributions of the view counts for each day of the week. We want each distribution to be represented as a boxplot.
 
 We will begin by defining the order of the days, starting with Monday and ending with Sunday. This is how the days will be ordered in the plot we create.
