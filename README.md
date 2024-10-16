@@ -124,7 +124,7 @@ g = sns.boxplot(data=df,
             );
 g.set_title('Views distribution per weekday (2023-2024)');
 ```
-*LINK* Boxplot_Views
+![Alt text](https://github.com/FrankCoRa/EDA_Waykitech/blob/main/Boxplot_Views.png)
 Notice that the median remains different on all of the days of the week. As for Saturday and Sunday, however, the distributions are both lower than they are during the rest of the week. We also know that the mean numbers of views that occurred on Saturday and Sunday were lower than on the other weekdays. Why might this be? Perhaps people prefers to spend more time with the family. In the U.S., Saturday and Sunday are days that many people don't work, so there may be fewer people  on their mobiles or computers. This is only speculation, but it's one possible path for further exploration.
 
 ## Monthly Views 2023–2024
@@ -188,6 +188,6 @@ for container in ax.containers:
 # Display the plot
 plt.show()
 ```
-*LINK* Barchart_Views
+![Alt text](https://github.com/FrankCoRa/EDA_Waykitech/blob/main/Barchart_Views.png)
 
 Over the past two years, we observed that the Company’s website marketing activities and posts began in October 2023. One standout month is January 2024, which accounted for more than 50% of the total views compared to the other months in 2024.
